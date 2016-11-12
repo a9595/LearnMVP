@@ -1,4 +1,4 @@
-package edu.tieorange.learnmvp.ui;
+package edu.tieorange.learnmvp.repos;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -8,22 +8,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import com.android.databinding.library.baseAdapters.BR;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import edu.tieorange.learnmvp.R;
-import edu.tieorange.learnmvp.User;
+import edu.tieorange.learnmvp.models.Repo;
+
 
 /**
  * Created by root on 11/12/16.
  */
 public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.ViewHolder> {
     private Context mContext;
-    private List<User> mMyModels = new ArrayList<>();
+    private List<Repo> mMyModels = new ArrayList<>();
 
-    public RepoAdapter(Context context, List<User> myModels) {
+    public RepoAdapter(Context context, List<Repo> myModels) {
         mContext = context;
         mMyModels = myModels;
     }
@@ -38,23 +40,22 @@ public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        User user = mMyModels.get(position);
-
-        ViewDataBinding viewDataBinding = holder.mViewDataBinding;
-        viewDataBinding.setVariable(BR.user, user);
+        Repo repo = mMyModels.get(position);
+        holder.mBinding.setVariable(BR.repo, repo);
+        holder.mBinding.executePendingBindings();
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mMyModels.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private ViewDataBinding mViewDataBinding;
+        private ViewDataBinding mBinding;
 
         public ViewHolder(View view) {
             super(view);
-            DataBindingUtil.bind(view);
+            mBinding = DataBindingUtil.bind(view);
         }
     }
 }

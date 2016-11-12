@@ -1,7 +1,8 @@
-package edu.tieorange.learnmvp.ui;
+package edu.tieorange.learnmvp.repos;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import edu.tieorange.learnmvp.models.Repo;
 
 /**
  * Created by root on 11/12/16.

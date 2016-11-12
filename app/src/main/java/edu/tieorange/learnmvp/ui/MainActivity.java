@@ -1,9 +1,10 @@
-package edu.tieorange.learnmvp;
+package edu.tieorange.learnmvp.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import edu.tieorange.learnmvp.R;
 import edu.tieorange.learnmvp.ui.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,6 +16,5 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
-
     }
 }

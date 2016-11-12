@@ -1,4 +1,4 @@
-package edu.tieorange.learnmvp;
+package edu.tieorange.learnmvp.models;
 
 import android.databinding.BindingAdapter;
 import android.databinding.InverseBindingAdapter;

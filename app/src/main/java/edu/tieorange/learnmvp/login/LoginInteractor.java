@@ -1,6 +1,8 @@
-package edu.tieorange.learnmvp;
+package edu.tieorange.learnmvp.login;
 
 import android.os.Handler;
+
+import edu.tieorange.learnmvp.models.User;
 
 /**
  * Created by root on 11/12/16.
@@ -11,9 +13,9 @@ class LoginInteractor {
             @Override
             public void run() {
                 if (user.password.get().isEmpty() || user.username.get().isEmpty()) {
-                    listener.onSuccess();
-                } else {
                     listener.onError();
+                } else {
+                    listener.onSuccess();
                 }
             }
         }, 1000);

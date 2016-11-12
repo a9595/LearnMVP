@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import edu.tieorange.learnmvp.ILoginView;
-import edu.tieorange.learnmvp.LoginPresenter;
-import edu.tieorange.learnmvp.R;
-import edu.tieorange.learnmvp.User;
 import edu.tieorange.learnmvp.databinding.ActivityLoginBinding;
+import edu.tieorange.learnmvp.login.ILoginView;
+import edu.tieorange.learnmvp.login.LoginPresenter;
+import edu.tieorange.learnmvp.R;
+import edu.tieorange.learnmvp.models.User;
 
 public class LoginActivity extends AppCompatActivity implements ILoginView {
 

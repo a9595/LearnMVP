@@ -1,4 +1,6 @@
-package edu.tieorange.learnmvp.ui;
+package edu.tieorange.learnmvp.models;
+
+import android.databinding.ObservableField;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,13 +9,13 @@ import java.util.List;
  * Created by root on 11/12/16.
  */
 public class Repo {
-    public String name;
+    public ObservableField<String> name = new ObservableField<>();
 
     public Repo(String name) {
-        this.name = name;
+        this.name.set(name);
     }
 
-    static List<Repo> getDummy(int count) {
+    public static List<Repo> getDummy(int count) {
         List<Repo> list = new ArrayList<>();
         for (int i = 0; i < count; i++) {
             list.add(new Repo("Repo #" + i + 1));
