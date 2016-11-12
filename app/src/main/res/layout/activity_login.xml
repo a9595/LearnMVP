@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="user name"
-                android:text="@{user.mUsername"/>
+                android:text="@={user.username}"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:hint="password"
                 android:inputType="textPassword"
-                android:text="@{user.password}"/>
+                android:text="@={user.password}"/>
         </android.support.design.widget.TextInputLayout>
 
         <Button
