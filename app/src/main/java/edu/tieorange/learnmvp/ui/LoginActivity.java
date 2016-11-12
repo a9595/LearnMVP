@@ -23,7 +23,6 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
         super.onCreate(savedInstanceState);
         ActivityLoginBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         binding.setUser(mUser);
-
         mPresenter = new LoginPresenter(this);
     }
 
