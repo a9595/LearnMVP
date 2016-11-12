@@ -1,19 +1,22 @@
-package edu.tieorange.learnmvp;
+package edu.tieorange.learnmvp.ui;
 
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import edu.tieorange.learnmvp.ILoginView;
+import edu.tieorange.learnmvp.LoginPresenter;
+import edu.tieorange.learnmvp.R;
+import edu.tieorange.learnmvp.User;
 import edu.tieorange.learnmvp.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity implements ILoginView {
 
     private static final String TAG = LoginActivity.class.getCanonicalName();
     private User mUser = new User();
-    private ILoginPresenter mPresenter;
+    private LoginPresenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
